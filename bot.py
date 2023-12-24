@@ -62,7 +62,7 @@ def show_products(message, product_id=0, products=None):
     product_image = product[2]
     product_price = product[3]
     configurations = product[4]
-
+    bot.send_message(chat_id, "Catalog product")
     bot.send_photo(chat_id, product_image, caption=f"💻Название продукта:  {brand_name}\n\n💵Стоимость продукта за месяц:  {product_price}\n\n📉Характеристики продукта:  {configurations}",
                    reply_markup=generate_message_menu(url))
 
